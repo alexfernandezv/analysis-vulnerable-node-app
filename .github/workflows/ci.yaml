@@ -10,7 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run CodeQL analysis
-        uses: github/codeql-action/analyze@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          category: "/language:javascript"
+          node-version: '21'
+
+      - name: Install dependencies
+        run: npm install
+
