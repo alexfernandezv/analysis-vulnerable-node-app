@@ -23,12 +23,4 @@ jobs:
         env:
           VALIDATE_JAVASCRIPT_STANDARD: true
           DEFAULT_BRANCH: main 
-          
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: javascript
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
 
